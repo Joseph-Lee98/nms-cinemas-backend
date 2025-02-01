@@ -1,10 +1,10 @@
 INSERT INTO users (name, email, password, role, created_at) 
 VALUES 
-('Admin User', 'admin@nmscinemas.com', 'admin123', 'ADMIN', CURRENT_TIMESTAMP),
-('John Doe', 'john.doe@example.com', 'password123', 'USER', CURRENT_TIMESTAMP),
-('Jane Smith', 'jane.smith@example.com', 'password123', 'USER', CURRENT_TIMESTAMP),
-('Alice Johnson', 'alice.johnson@example.com', 'password123', 'USER', CURRENT_TIMESTAMP),
-('Bob Brown', 'bob.brown@example.com', 'password123', 'USER', CURRENT_TIMESTAMP);
+('Admin User', 'admin@nmscinemas.com', 'Admin123!', 'ADMIN', CURRENT_TIMESTAMP),
+('John Doe', 'john.doe@example.com', 'J0hndoe#', 'USER', CURRENT_TIMESTAMP),
+('Jane Smith', 'jane.smith@example.com', 'J@neSm1th', 'USER', CURRENT_TIMESTAMP),
+('Alice Johnson', 'alice.johnson@example.com', '@liceJ0hnson', 'USER', CURRENT_TIMESTAMP),
+('Bob Brown', 'bob.brown@example.com', 'B0bsm!th', 'USER', CURRENT_TIMESTAMP);
 
 
 INSERT INTO movies (title, genre, language, release_date, duration_minutes, description, poster_url, created_at) 

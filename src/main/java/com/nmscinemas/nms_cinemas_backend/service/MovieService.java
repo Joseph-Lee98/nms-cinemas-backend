@@ -1,11 +1,12 @@
 package com.nmscinemas.nms_cinemas_backend.service;
 
-import java.util.List;
-
+import com.nmscinemas.nms_cinemas_backend.entity.Movie;
+import com.nmscinemas.nms_cinemas_backend.exception.MovieNotFoundException;
+import com.nmscinemas.nms_cinemas_backend.repository.MovieRepository;
 import org.springframework.stereotype.Service;
 
-import com.nmscinemas.nms_cinemas_backend.entity.Movie;
-import com.nmscinemas.nms_cinemas_backend.repository.MovieRepository;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MovieService {
