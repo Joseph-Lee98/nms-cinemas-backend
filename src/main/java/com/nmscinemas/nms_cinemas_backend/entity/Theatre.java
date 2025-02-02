@@ -33,12 +33,10 @@ public class Theatre {
 	
 	public Theatre() {}
 
-	public Theatre(Long theatreId, String name, String location, Integer capacity, Timestamp createdAt) {
-		this.theatreId = theatreId;
+	public Theatre(String name, String location, Integer capacity) {
 		this.name = name;
 		this.location = location;
 		this.capacity = capacity;
-		this.createdAt = createdAt;
 	}
 
 	public Long getTheatreId() {
