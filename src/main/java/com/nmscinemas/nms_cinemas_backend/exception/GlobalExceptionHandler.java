@@ -50,4 +50,14 @@ public class GlobalExceptionHandler {
         errorResponse.put("message", ex.getMessage());
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+    
+
+    @ExceptionHandler(InvalidMovieDataException.class)
+    public ResponseEntity<Map<String, String>> handleInvalidMovieDataException(InvalidMovieDataException ex) {
+        Map<String, String> errorResponse = new HashMap<>();
+        errorResponse.put("error", "Invalid movie data");
+        errorResponse.put("message", ex.getMessage());
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+    }
+
 }

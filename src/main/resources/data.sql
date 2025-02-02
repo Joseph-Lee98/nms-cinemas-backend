@@ -7,13 +7,13 @@ VALUES
 ('Bob Brown', 'bob.brown@example.com', 'B0bsm!th', 'USER', CURRENT_TIMESTAMP);
 
 
-INSERT INTO movies (title, genre, language, release_date, duration_minutes, description, poster_url, created_at) 
+INSERT INTO movies (title, genre, language, duration_minutes, description, poster_url, created_at) 
 VALUES 
-('Inception', 'SCIENCE_FICTION', 'ENGLISH', '2010-07-16', 148, 'A thief who enters the dreams of others to steal secrets from their subconscious.', 'https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg', CURRENT_TIMESTAMP),
-('Interstellar', 'SCIENCE_FICTION', 'ENGLISH', '2014-11-07', 169, 'A team of explorers travel through a wormhole in space to ensure humanity''s survival.', 'https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg', CURRENT_TIMESTAMP),
-('Parasite', 'THRILLER', 'KOREAN', '2019-05-30', 132, 'A poor family schemes their way into the lives of a wealthy household.', 'https://upload.wikimedia.org/wikipedia/en/5/53/Parasite_%282019_film%29.png', CURRENT_TIMESTAMP),
-('Joker', 'DRAMA', 'ENGLISH', '2019-10-04', 122, 'A mentally troubled comedian embarks on a downward spiral.', 'https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg', CURRENT_TIMESTAMP),
-('Spirited Away', 'ANIMATION', 'JAPANESE', '2001-07-20', 125, 'A girl wanders into a mysterious world ruled by spirits and gods.', 'https://upload.wikimedia.org/wikipedia/en/d/db/Spirited_Away_Japanese_poster.png', CURRENT_TIMESTAMP);
+('Inception', 'SCIENCE_FICTION', 'ENGLISH', 148, 'A thief who enters the dreams of others to steal secrets from their subconscious.', 'https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg', CURRENT_TIMESTAMP),
+('Interstellar', 'SCIENCE_FICTION', 'ENGLISH', 169, 'A team of explorers travel through a wormhole in space to ensure humanity''s survival.', 'https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg', CURRENT_TIMESTAMP),
+('Parasite', 'THRILLER', 'KOREAN', 132, 'A poor family schemes their way into the lives of a wealthy household.', 'https://upload.wikimedia.org/wikipedia/en/5/53/Parasite_%282019_film%29.png', CURRENT_TIMESTAMP),
+('Joker', 'DRAMA', 'ENGLISH', 122, 'A mentally troubled comedian embarks on a downward spiral.', 'https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg', CURRENT_TIMESTAMP),
+('Spirited Away', 'ANIMATION', 'JAPANESE', 125, 'A girl wanders into a mysterious world ruled by spirits and gods.', 'https://upload.wikimedia.org/wikipedia/en/d/db/Spirited_Away_Japanese_poster.png', CURRENT_TIMESTAMP);
 
 INSERT INTO theatres (name, location, capacity, created_at) 
 VALUES 

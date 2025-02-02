@@ -38,10 +38,6 @@ public class Movie {
 	private MovieLanguage language;
 
 	@Column(nullable = false)
-	@Temporal(TemporalType.DATE) 
-	private Date releaseDate;
-
-	@Column(nullable = false)
 	private int durationMinutes;
 
 	@Column(nullable=false) 
@@ -56,18 +52,15 @@ public class Movie {
 	
 	public Movie() {}
 
-	public Movie(Long movieId, String title, MovieGenre genre, MovieLanguage language, Date releaseDate,
-			int durationMinutes, String description, String posterUrl, Timestamp createdAt) {
-		this.movieId = movieId;
-		this.title = title;
-		this.genre = genre;
-		this.language = language;
-		this.releaseDate = releaseDate;
-		this.durationMinutes = durationMinutes;
-		this.description = description;
-		this.posterUrl = posterUrl;
-		this.createdAt = createdAt;
-	}
+	  public Movie(String title, MovieGenre genre, MovieLanguage language,
+              int durationMinutes, String description, String posterUrl) {
+     this.title = title;
+     this.genre = genre;
+     this.language = language;
+     this.durationMinutes = durationMinutes;
+     this.description = description;
+     this.posterUrl = posterUrl;
+ }
 
 	public Long getMovieId() {
 		return movieId;
@@ -99,14 +92,6 @@ public class Movie {
 
 	public void setLanguage(MovieLanguage language) {
 		this.language = language;
-	}
-
-	public Date getReleaseDate() {
-		return releaseDate;
-	}
-
-	public void setReleaseDate(Date releaseDate) {
-		this.releaseDate = releaseDate;
 	}
 
 	public int getDurationMinutes() {
