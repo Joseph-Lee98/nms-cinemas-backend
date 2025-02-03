@@ -1,8 +1,11 @@
 package com.nmscinemas.nms_cinemas_backend.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.nmscinemas.nms_cinemas_backend.dto.TheatreDTO;
+import com.nmscinemas.nms_cinemas_backend.entity.Movie;
 import com.nmscinemas.nms_cinemas_backend.entity.Theatre;
 import com.nmscinemas.nms_cinemas_backend.exception.InvalidTheatreDataException;
 import com.nmscinemas.nms_cinemas_backend.repository.TheatreRepository;
@@ -14,6 +17,10 @@ public class TheatreService {
 	public TheatreService(TheatreRepository theatreRepository) {
 		this.theatreRepository = theatreRepository;
 	}
+	
+	 public List<Theatre> getAllTheatres() {
+	        return theatreRepository.findAll();
+	    }
 	
 	 public Theatre addTheatre(TheatreDTO theatreDTO) {
 	        validateTheatreDTO(theatreDTO);
