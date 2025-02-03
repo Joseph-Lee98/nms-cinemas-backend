@@ -19,6 +19,22 @@ public class GlobalExceptionHandler {
 	    return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
 	}
 
+	@ExceptionHandler(BookingNotFoundException.class)
+	public ResponseEntity<Map<String, String>> handleBookingNotFoundException(BookingNotFoundException ex) {
+	    Map<String, String> errorResponse = new HashMap<>();
+	    errorResponse.put("error", "Booking not found");
+	    errorResponse.put("message", ex.getMessage());
+	    return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+	}
+
+	
+	@ExceptionHandler(UserNotFoundException.class)
+	public ResponseEntity<Map<String, String>> handleUserNotFoundException(UserNotFoundException ex) {
+	    Map<String, String> errorResponse = new HashMap<>();
+	    errorResponse.put("error", "User not found");
+	    errorResponse.put("message", ex.getMessage());
+	    return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+	}
 	
 	@ExceptionHandler(InvalidShowtimeDataException.class)
 	public ResponseEntity<Map<String, String>> handleInvalidShowtimeDataException(InvalidShowtimeDataException ex) {

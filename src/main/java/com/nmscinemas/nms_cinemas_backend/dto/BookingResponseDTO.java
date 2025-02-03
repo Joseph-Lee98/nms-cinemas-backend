@@ -1,16 +1,26 @@
 package com.nmscinemas.nms_cinemas_backend.dto;
 
-public class BookingDTO {
+public class BookingResponseDTO {
+    private Long bookingId;
     private Long userId;
     private Long showtimeId;
     private int numberOfTickets;
 
-    public BookingDTO() {}
+    public BookingResponseDTO() {}
 
-    public BookingDTO(Long userId, Long showtimeId, int numberOfTickets) {
+    public BookingResponseDTO(Long bookingId, Long userId, Long showtimeId, int numberOfTickets) {
+        this.bookingId = bookingId;
         this.userId = userId;
         this.showtimeId = showtimeId;
         this.numberOfTickets = numberOfTickets;
+    }
+
+    public Long getBookingId() {
+        return bookingId;
+    }
+
+    public void setBookingId(Long bookingId) {
+        this.bookingId = bookingId;
     }
 
     public Long getUserId() {
