@@ -1,6 +1,7 @@
 package com.nmscinemas.nms_cinemas_backend.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -32,6 +33,18 @@ public class ShowtimeService {
 						showtime.getTheatre().getTheatreId(), showtime.getShowDate(), showtime.getAvailableSeats()))
 				.toList();
 	}
+	
+	public List<ShowtimeDTO> getShowtimesByMovieId(Long movieId) {
+        return showtimeRepository.findByMovie_MovieId(movieId).stream()
+                .map(showtime -> new ShowtimeDTO(
+                        showtime.getShowtimeId(),
+                        showtime.getMovie().getMovieId(),
+                        showtime.getTheatre().getTheatreId(),
+                        showtime.getShowDate(),
+                        showtime.getAvailableSeats()
+                ))
+                .collect(Collectors.toList());
+    }
 
 	public Showtime addShowtime(ShowtimeDTO showtimeDTO) {
 		validateShowtimeDTO(showtimeDTO);

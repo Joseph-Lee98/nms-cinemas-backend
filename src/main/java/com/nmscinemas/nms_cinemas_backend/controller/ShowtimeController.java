@@ -23,6 +23,12 @@ public class ShowtimeController {
 	public List<ShowtimeDTO> getAllShowtimes() {
 		return showtimeService.getAllShowtimes();
 	}
+	
+	@GetMapping("/{movieId}")
+    public ResponseEntity<List<ShowtimeDTO>> getShowtimesByMovieId(@PathVariable Long movieId) {
+        List<ShowtimeDTO> showtimes = showtimeService.getShowtimesByMovieId(movieId);
+        return ResponseEntity.ok(showtimes);
+    }
 
 	@PostMapping
 	public ResponseEntity<ShowtimeDTO> addShowtime(@RequestBody ShowtimeDTO showtimeDTO) {
