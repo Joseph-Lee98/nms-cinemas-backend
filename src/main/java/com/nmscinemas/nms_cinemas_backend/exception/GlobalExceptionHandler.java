@@ -11,6 +11,15 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 	
+	@ExceptionHandler(InvalidBookingException.class)
+	public ResponseEntity<Map<String, String>> handleInvalidBookingException(InvalidBookingException ex) {
+	    Map<String, String> errorResponse = new HashMap<>();
+	    errorResponse.put("error", "Invalid booking request");
+	    errorResponse.put("message", ex.getMessage());
+	    return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+	}
+
+	
 	@ExceptionHandler(InvalidShowtimeDataException.class)
 	public ResponseEntity<Map<String, String>> handleInvalidShowtimeDataException(InvalidShowtimeDataException ex) {
 	    Map<String, String> errorResponse = new HashMap<>();
